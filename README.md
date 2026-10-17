@@ -82,6 +82,13 @@ dongles sleep regularly and v0.1 caused dashboards to flash with every
 failed poll. The connectivity binary sensor is the single source of truth
 for reachability.
 
+All coordinator I/O paths share a lock and leave at least ten seconds after
+the preceding operation ends before opening another session. The first
+operation is not delayed, elapsed quiet time is reused, and errors do not
+trigger a command retry. This applies to one coordinator, not another client
+such as J.O.E. or another process. Cancelling a caller does not guarantee that
+a synchronous worker or a drink already dispatched to the machine has stopped.
+
 ### Languages
 
 Entity names use Home Assistant's native per-user translations, so each
