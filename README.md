@@ -4,7 +4,7 @@ This maintained fork carries the poll-health and session-spacing fixes in
 v1.1.2. Protocol code and recipes are not reimplemented here. See
 [FORK.md](FORK.md) for provenance, the exact scope and maintenance limits.
 
-[![CI](https://github.com/makefu/jura-connect-hass/actions/workflows/ci.yml/badge.svg)](https://github.com/makefu/jura-connect-hass/actions/workflows/ci.yml)
+[![CI](https://github.com/orange1fruit/jura-connect-hass/actions/workflows/ci.yml/badge.svg)](https://github.com/orange1fruit/jura-connect-hass/actions/workflows/ci.yml)
 [![hacs_custom](https://img.shields.io/badge/HACS-Custom-orange.svg)](https://hacs.xyz/docs/faq/custom_repositories)
 
 Home Assistant integration for WiFi-connected JURA coffee machines (S8, EB,
@@ -181,7 +181,7 @@ deliberately **not** exposed as HA services. Use the upstream
 ### HACS (recommended)
 
 1. In HACS → Integrations → ⋮ → **Custom repositories**, add
-   `https://github.com/makefu/jura-connect-hass` as type *Integration*.
+   `https://github.com/orange1fruit/jura-connect-hass` as type *Integration*.
 2. Install **Jura Connect** from the list.
 3. Restart Home Assistant.
 
