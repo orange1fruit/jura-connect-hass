@@ -4,6 +4,23 @@ All notable changes to this integration are documented here. The format
 follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); the
 version follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.2] — 2026-10-17
+
+### Fixed
+
+- Report the latest successful backend poll separately from retained sensor
+  values through `last_successful_update` and `last_poll_success` attributes.
+  Tolerated offline errors no longer look like a fresh successful read.
+- Leave ten seconds after the preceding coordinator I/O operation ends before
+  opening another session, including errors. Polls, named commands, followed
+  brews and setting writes share this gate; commands are never retried by it.
+
+### Changed
+
+- Pin the protocol dependency to `jura_connect==0.14.0` for a reproducible
+  first fork release. The stock brew response and post-brew refresh behavior
+  are preserved; recipes continue to live in Home Assistant YAML.
+
 ## [1.1.1] — 2026-10-04
 
 ### Changed

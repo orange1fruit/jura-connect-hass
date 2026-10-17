@@ -1,5 +1,9 @@
 # Jura Connect — Home Assistant Integration
 
+This maintained fork carries the poll-health and session-spacing fixes in
+v1.1.2. Protocol code and recipes are not reimplemented here. See
+[FORK.md](FORK.md) for provenance, the exact scope and maintenance limits.
+
 [![CI](https://github.com/makefu/jura-connect-hass/actions/workflows/ci.yml/badge.svg)](https://github.com/makefu/jura-connect-hass/actions/workflows/ci.yml)
 [![hacs_custom](https://img.shields.io/badge/HACS-Custom-orange.svg)](https://hacs.xyz/docs/faq/custom_repositories)
 
@@ -9,7 +13,7 @@ TT237W series). Built on the reverse-engineered
 directly to the machine's WiFi dongle on TCP/51515. No cloud, no vendor
 account.
 
-Requires `jura_connect>=0.14.0`. The integration ships the Python dependency
+Requires `jura_connect==0.14.0`. The integration ships the Python dependency
 declaration; Nix users get it pinned via the flake input.
 
 ## Features
